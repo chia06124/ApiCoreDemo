@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Filters;
+using ApiCoreDemo.ActionFilter1;
 using ApiCoreDemo.Models;
 using ApiCoreDemo.Repository.IRepository;
 using ApiCoreDemo.Service.IService;
@@ -20,8 +22,8 @@ namespace ApiCoreDemo.Controllers
         {
             _IBirthdayCityService = IBirthdayCityService;
         }
-        
         [HttpGet]
+        [AuthorizationFilter]
         public async Task<IEnumerable<ViwHsoabirthCity>> GetBirthdayCity()
         {
             return  await _IBirthdayCityService.GetAll();

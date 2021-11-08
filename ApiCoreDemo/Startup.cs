@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiCoreDemo.ActionFilter1;
 using ApiCoreDemo.Models;
 using ApiCoreDemo.Repository;
 using ApiCoreDemo.Repository.IRepository;
@@ -37,7 +38,11 @@ namespace ApiCoreDemo
             //services.AddScoped<IBirthDayRepository, BirthDayRepository>();
             services.AddScoped<IBirthDayCityRepository, BirthDayCityRepository>();
             services.AddScoped<IBirthdayCityService, BirthdayCityService>();
-
+            //services.AddControllers(options =>
+            //{
+            //    options.AddMessageFilter();
+            //});
+            services.AddScoped<AuthorizationFilter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
