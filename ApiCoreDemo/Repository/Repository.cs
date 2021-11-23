@@ -45,6 +45,5 @@ namespace ApiCoreDemo.Repository
                 }
             }
         }
-
     }
 }

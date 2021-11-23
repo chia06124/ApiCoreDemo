@@ -10,9 +10,9 @@ namespace ApiCoreDemo.Repository.IRepository
     {
         public TEntity Get();
 
-        public Task<IEnumerable<TEntity>> GetAll();
+         Task<IEnumerable<TEntity>> GetAll();
 
-        //void Create(TEntity entity);
+        //public Task Create(TEntity entity);
 
         //void Update(TEntity entity);
 

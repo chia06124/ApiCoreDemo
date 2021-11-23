@@ -38,6 +38,8 @@ namespace ApiCoreDemo
             //services.AddScoped<IBirthDayRepository, BirthDayRepository>();
             services.AddScoped<IBirthDayCityRepository, BirthDayCityRepository>();
             services.AddScoped<IBirthdayCityService, BirthdayCityService>();
+            services.AddScoped<IOO010000_MRepository, OO010000_MRepository>();
+            services.AddScoped<IOO010000_MService, OO010000_MService>();
             //services.AddControllers(options =>
             //{
             //    options.AddMessageFilter();
